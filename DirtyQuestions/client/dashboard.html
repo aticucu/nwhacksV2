@@ -1,0 +1,15 @@
+<template name="dashboard">
+	<div class="user-profile">
+		<img src="{{currentUser.profile.picture}}" alt="{{currentUser.username}}">
+		{{userName}}
+
+		<button id="create-quiz" class="btn btn-default"> Create Quiz </button>
+  	</div>
+
+  	<div class="user-quiz">
+  		<h1>Quizzes!!!</h1>
+  		{{#each quizzes}}
+  			<a href="/quiz/{{qid}}">{{quiz_name}}</a>
+  		{{/each}}
+  	</div>
+</template>
