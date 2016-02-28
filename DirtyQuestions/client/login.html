@@ -1,7 +1,22 @@
+
+
+ <head>
+ <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body style="background-color:grey">
+	<h1 class="text-center"><strong>Dirty Answers</strong></h1>
+</body>
 <template name="login">
     {{#if currentUser}}
         {{> dashboard}}
     {{else}}
-        <button id="facebook-login" class="btn btn-default"> Login with Facebook</button>
+   	<div class="col-md-offset-2 col-md-8 ">
+   		<br>
+        <button id="facebook-login" type="button" class="btn btn-primary btn-lg btn-block"> Login with Facebook</button>
+    </div>
     {{/if}}
 </template>

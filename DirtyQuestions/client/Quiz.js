@@ -1,7 +1,6 @@
 Session.setDefault('qid', 0);
 Quizzes = new Mongo.Collection('Quizzes');
 Questions = new Mongo.Collection('Questions');
-
 if (Meteor.isClient) {
   
   Template.quiz.helpers({
