@@ -1,12 +1,36 @@
 <template name="dashboard">
+	<div style="background-color:grey" >
 	<div class="user-profile">
-		<img src="{{currentUser.profile.picture}}" alt="{{currentUser.username}}">
-		{{userName}}
-
-		<button id="create-quiz" class="btn btn-default"> Create Quiz </button>
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				<div style="background-color: #B5B8BB" class="thumbnail">
+		<br>
+		<img src="{{currentUser.profile.picture}}" class="img-circle" alt="{{currentUser.username}}">
+		<br>
+		<h3 class="text-center">{{userName}}</h3>
+		<br>
+		<button id="create-quiz" style="border-radius:0px" class="btn btn-primary btn-lg btn-block"> Create Quiz </button>
+				</div>
+			</div>
+		</div>
   	</div>
+
+  <hr>
+  <div class="row">
+  	<div class="col-md-10 col-md-offset-1">
 
   	<div class="user-quiz">
-  		<h1>Quizzes!!!</h1>
+  		<h1 class="text-center"><strong>Quizzes</strong></h1>
+  		<div class="row">
+  		{{#each quizzes}}
+  			<div class="col-md-4">
+  			<a  style="background-color: #B5B8BB" class="thumbnail" href="/quiz/{{qid}}"><h1 class="text-center">{{quiz_name}}</h1></a>
+  			</div>
+  		{{/each}}
+  		</div>
   	</div>
+
+  	</div>
+  </div>
+</div>
 </template>

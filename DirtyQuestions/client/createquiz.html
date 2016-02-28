@@ -1,0 +1,25 @@
+<template name="createquiz">
+    <head>
+        <title>Create Quiz</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>Create Quizzz</h1>
+        </header>
+        {{#if Template.subscriptionsReady}}
+            {{#each loopCount 4}}
+            <form>
+                <h4>{{questionList}}</h4>
+                {{#each questionAnswer}}
+                    <input type="radio" name="answer" value="{{this}}">{{this}}<br>
+                {{/each}}
+            </form>
+            {{else}}
+                Loading...
+            {{/each}}
+        {{/if}}
+
+        <input type="button" value="Submit">
+    </body>
+</template>
