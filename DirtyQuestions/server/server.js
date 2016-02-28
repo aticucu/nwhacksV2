@@ -1,4 +1,4 @@
-Quiz = new Mongo.Collection('Quiz');
+Quizzes = new Mongo.Collection('Quizzes');
 Questions = new Mongo.Collection('Questions');
 
 Accounts.onCreateUser(function(options, user) {

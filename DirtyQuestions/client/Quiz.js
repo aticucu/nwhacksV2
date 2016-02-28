@@ -1,5 +1,5 @@
 Session.setDefault('qid', 0);
-Quiz = new Mongo.Collection('Quiz');
+Quizzes = new Mongo.Collection('Quizzes');
 Questions = new Mongo.Collection('Questions');
 
 if (Meteor.isClient) {
@@ -12,7 +12,7 @@ if (Meteor.isClient) {
 
   Template.quiz.questions = function() {
   	var quiz_id = Session.get('qid');
-  	var quizFromID = Quiz.findOne({quiz_id : quiz_id.toString()});
+  	var quizFromID = Quizzes.findOne({quiz_id : quiz_id.toString()});
 
   	var questionsArr = quizFromID.questions;
   	var questionList = [];
