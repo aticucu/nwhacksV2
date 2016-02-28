@@ -1,0 +1,17 @@
+<template name="createquiz">
+    <head>
+        <title>Create Quiz</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>Create Quizzz</h1>
+        </header>
+        <form>
+            <h4>{{questionList}}</h4>
+            {{#each questionAnswer}}
+                <input type="radio" name="1" >{{this}}<br>
+            {{/each}}
+        </form>
+    </body>
+</template>
