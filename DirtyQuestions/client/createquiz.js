@@ -1,7 +1,7 @@
 Questions = new Mongo.Collection("questions");
 var count = 0 ;
 var rand_id = 0;
-var used_questions = [-1];
+var used_questions = new Array();
 Template.createquiz.helpers({
     questionList: function(){
         console.log(used_questions);

@@ -1,9 +1,9 @@
 Router.route('/', function () {
-  this.render('login');
+    this.render('login');
 });
 
 Router.route('/createquestion', function () {
-  this.render('createquestion');
+    this.render('createquestion');
 });
 
 Router.route('/createquiz', function(){
@@ -11,7 +11,7 @@ Router.route('/createquiz', function(){
 });
 
 Router.route('/quiz/:id', function() {
-  var hash = this.params.id;
-  Session.set('qid', hash);
-  this.render('quiz');
+    var hash = this.params.id;
+    Session.set('qid', hash);
+    this.render('quiz');
 });
