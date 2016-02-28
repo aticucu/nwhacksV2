@@ -8,6 +8,16 @@ if (Meteor.isClient) {
     qid: function() {
       return Session.get('qid');
     },
+
+    answers: function(qtext, options) {
+  		var retArr = [];
+  		var answers = Questions.findOne({question:qtext}).possibleAnswers;
+  		for (i = 0; i < answers.length; i++) {
+  			retArr.push({atext: answers[i]});
+  		}
+  		return retArr;
+    }
+
   });
 
   Template.quiz.questions = function() {
@@ -17,12 +27,13 @@ if (Meteor.isClient) {
   	var questionsArr = quizFromID.questions;
   	var questionList = [];
   	for (i = 0; i < questionsArr.length; i++) {
-  		var questionId = questionsArr[i].question_id.toString();
+  		var questionId = questionsArr[i].question_id;
   		var questionString = Questions.findOne({question_id:questionId}).question;
-  		questionList.push({text: questionString});
+  		questionList.push({qtext: questionString});
   	}
 
   	console.log(questionList);
   	return questionList;
   }
+
 }
