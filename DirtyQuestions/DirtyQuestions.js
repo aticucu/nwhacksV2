@@ -1,9 +1,7 @@
-
 Router.route('/', function () {
-  this.render('login');
+  this.path('login');
 });
 
 Router.route('/createquestion', function () {
-  this.render('createquestion');
+  this.path('createquestion');
 });
-
