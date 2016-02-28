@@ -11,13 +11,17 @@ Template.createquestion.events({
       var a4 = event.target.a4.value;
       var nsfw = event.target.nsfw.checked;
 
+      var count = Questions.find().count();
+
       // Insert a task into the collection
       Questions.insert({
+        question_id: count++,
         question: qs,
-        possibleAnswers: {a1,a2,a3,a4},
+        possibleAnswers: [a1,a2,a3,a4],
         nsfw: nsfw,
         createdAt: new Date() // current time
       });
+      count = Questions.find().count() + 1;
  
       // Clear form
       event.target.qs.value = "";

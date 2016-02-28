@@ -4,13 +4,15 @@
 	</head>
 
 	<body>
-		<ul>
-			{{#each questions}}
-				<br><br><b>{{qtext}}</b>
-				{{#each answers qtext}}
-					<li>{{atext}}</li>
-				{{/each}}
+		{{#each questions}}
+			<br><br>
+			<b>{{qtext}}</b>
+			<br>
+
+			{{#each answers qtext}}
+				<input type="radio" id="ans" value="{{atext}}" name='{{../qtext}}'/>{{atext}}<br>
 			{{/each}}
-		</ul>
+		{{/each}}
+		<button type="submit" id="next">Next</button>
 	</body>
 </template>

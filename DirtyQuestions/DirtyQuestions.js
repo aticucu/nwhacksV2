@@ -9,5 +9,6 @@ Router.route('/createquestion', function () {
 Router.route('/quiz/:id', function() {
   var hash = this.params.id;
   Session.set('qid', hash);
+
   this.render('quiz');
 });
