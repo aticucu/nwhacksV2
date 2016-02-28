@@ -7,11 +7,19 @@
         <header>
             <h1>Create Quizzz</h1>
         </header>
-        <form>
-            <h4>{{questionList}}</h4>
-            {{#each questionAnswer}}
-            <input type="radio" name="1" >{{this}}<br>
+        {{#if Template.subscriptionsReady}}
+            {{#each loopCount 4}}
+            <form>
+                <h4>{{questionList}}</h4>
+                {{#each questionAnswer}}
+                    <input type="radio" name="answer" value="{{this}}">{{this}}<br>
+                {{/each}}
+            </form>
+            {{else}}
+                Loading...
             {{/each}}
-        </form>
+        {{/if}}
+
+        <input type="button" value="Submit">
     </body>
 </template>
