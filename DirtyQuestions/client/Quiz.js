@@ -19,7 +19,7 @@ if (Meteor.isClient) {
   	for (i = 0; i < questionsArr.length; i++) {
   		var questionId = questionsArr[i].question_id.toString();
   		var questionString = Questions.findOne({question_id:questionId}).question;
-  		questionList.push(questionString);
+  		questionList.push({text: questionString});
   	}
 
   	console.log(questionList);
