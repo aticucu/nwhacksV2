@@ -1,18 +1,17 @@
-<head>
-    <title>Create Quiz</title>
-</head>
-
-<body>
-    <header>
-        <h1>Create Quiz</h1>
-    </header>
-    <ul>
-      {{questionList.question}}
-    </ul>
-</body>
-
-
 <template name="createquiz">
-    <span class="text">{{question}}</span>
-    <h1>HELLO</h1>
+    <head>
+        <title>Create Quiz</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>Create Quizzz</h1>
+        </header>
+        <form>
+            <h4>{{questionList}}</h4>
+            {{#each questionAnswer}}
+                <input type="radio" name="1" >{{this}}<br>
+            {{/each}}
+        </form>
+    </body>
 </template>
