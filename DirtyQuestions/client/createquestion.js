@@ -1,3 +1,4 @@
+Questions = new Mongo.Collection('Questions');
 Template.createquestion.events({
     "submit .newquestion": function (event) {
       // Prevent default browser form submit
