@@ -1,7 +1,11 @@
+Quizzes = new Mongo.Collection("quizzes");
+Questions = new Mongo.Collection("questions");
+
+
 Router.route('/', function () {
-  this.path('login');
+  this.render('login');
 });
 
 Router.route('/createquestion', function () {
-  this.path('createquestion');
+  this.render('createquestion');
 });
