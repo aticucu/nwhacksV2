@@ -27,3 +27,9 @@ Template.createquiz.helpers({
     }
 
 });
+
+Template.createquiz.events({
+	'click #create-quiz': function(event) {
+		Router.go('/createquiz');
+	}
+});
