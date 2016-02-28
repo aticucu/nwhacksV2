@@ -8,5 +8,8 @@
 
   	<div class="user-quiz">
   		<h1>Quizzes!!!</h1>
+  		{{#each quizzes}}
+  			<a href="/quiz/{{qid}}">{{quiz_name}}</a>
+  		{{/each}}
   	</div>
 </template>
