@@ -1,11 +1,12 @@
 Router.route('/', function () {
-  this.render('login');
+  this.path('login');
 });
 
 Router.route('/createquestion', function () {
-  this.render('createquestion');
+  this.path('createquestion');
 });
 
 Router.route('/createquiz', function(){
-    this.render('createquiz');
+    this.path('createquiz');
 })
+>>>>>>> master
