@@ -9,4 +9,3 @@ Router.route('/createquestion', function () {
 Router.route('/createquiz', function(){
     this.path('createquiz');
 })
->>>>>>> master
