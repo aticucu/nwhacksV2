@@ -1,9 +1,5 @@
-<body>
-  <h1>Welcome to Meteor!</h1>
-  {{>login}}
-</body>
-
 <template name="login">
+
     {{#if currentUser}}
         {{currentUser.services.facebook.name}} -
         {{currentUser.services.facebook.gender}}
