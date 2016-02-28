@@ -1,3 +1,14 @@
 <template name="quiz">
-  <h1>Layout Title: {{qid}}</h1>
+	<head>
+		<title>Quiz</title>
+	</head>
+
+	<body>
+		<h1>Layout Title: {{qid}}</h1>
+		<ul>
+			{{#each questions}}
+				<li>{{text}}</li>
+			{{/each}}
+		</ul>
+	</body>
 </template>
